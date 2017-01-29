@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SAVEPATH=/home/akh/radio/japanese
+SAVEPATH=~/radio/japanese
 if [ ! -e ${SAVEPATH} ]
 then
   mkdir -p ${SAVEPATH}/old
@@ -13,7 +13,7 @@ URIXML=$(echo "cat /rss/channel/item/enclosure/@url" |xmllint --shell http://www
 URL=`echo ${URIXML} | sed -e "s/^.*url=\"\(.*\)\".*$/\1/"`
 wget -nc -P ${SAVEPATH} ${URL}
 
-SAVEPATH=/home/akh/radio/english
+SAVEPATH=~/radio/english
 if [ ! -e ${SAVEPATH} ]
 then
   mkdir -p ${SAVEPATH}/old
@@ -26,7 +26,7 @@ URIXML=$(echo "cat /rss/channel/item/enclosure/@url" |xmllint --shell http://www
 URL=`echo ${URIXML} | sed -e "s/^.*url=\"\(.*\)\".*$/\1/"`
 wget -nc -P ${SAVEPATH} ${URL}
 
-SAVEPATH=/home/akh/radio/russian
+SAVEPATH=~/radio/russian
 if [ ! -e ${SAVEPATH} ]
 then
   mkdir -p ${SAVEPATH}/old
