@@ -3,7 +3,7 @@
 SAVEPATH=/home/akh/radio/japanese
 if [ ! -e ${SAVEPATH} ]
 then
-  mkdir -p ${SAVEPATH}
+  mkdir -p ${SAVEPATH}/old
 fi
 if ls ${SAVEPATH}/*.mp3 > /dev/null 2>&1
 then
@@ -16,7 +16,7 @@ wget -nc -P ${SAVEPATH} ${URL}
 SAVEPATH=/home/akh/radio/english
 if [ ! -e ${SAVEPATH} ]
 then
-  mkdir -p ${SAVEPATH}
+  mkdir -p ${SAVEPATH}/old
 fi
 if ls ${SAVEPATH}/*.mp3 > /dev/null 2>&1
 then
@@ -29,7 +29,7 @@ wget -nc -P ${SAVEPATH} ${URL}
 SAVEPATH=/home/akh/radio/russian
 if [ ! -e ${SAVEPATH} ]
 then
-  mkdir -p ${SAVEPATH}
+  mkdir -p ${SAVEPATH}/old
 fi
 if ls ${SAVEPATH}/*.mp3 > /dev/null 2>&1
 then
